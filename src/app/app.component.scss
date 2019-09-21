@@ -1,0 +1,64 @@
+.activeHighlight {
+  border-right: #3880ff 5px solid !important;
+  color: #3880ff;
+
+  ion-icon {
+    color: #3880ff;
+  }
+}
+
+.tableTop {
+  background: #3880ff;
+  color: white !important;
+}
+
+.tableText {
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+.noData {
+  text-align: center;
+
+  h2 {
+    color: grey;
+    font-size: 24px;
+  }
+
+  img {
+    width: 200px;
+    margin: auto;
+  }
+}
+
+.cbStamp {
+  color: grey;
+  text-align: center;
+  font-size: 14px;
+}
+.cbStampHref {
+  text-decoration: none;
+}
+.nodata {
+  color: grey;
+  text-align: center;
+  font-size: 26px;
+}
+
+ion-content {
+  --ion-background-color: #fbfbff;
+}
+
+ion-card {
+  background: white !important;
+}
+.logoAlign {
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+}

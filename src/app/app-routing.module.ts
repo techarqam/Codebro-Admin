@@ -1,20 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './Guards/Auth/auth.guard';
+import { NegAuthGuard } from './Guards/Auth/neg-auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
-  },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  { path: 'login', loadChildren: './Components/auth/auth.module#AuthPageModule', canActivate: [NegAuthGuard] },
+  { path: 'dashboard', loadChildren: './Components/main-components/main-components.module#MainComponentsPageModule', canActivate: [AuthGuard] }
 ];
 
 @NgModule({
@@ -23,4 +19,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -11,38 +11,6 @@ import * as firebase from 'firebase';
 export class AuthService {
 
 
-  signInPhone = new FormGroup({
-    phone: new FormControl("", Validators.compose([
-      Validators.required,
-      Validators.pattern("[1-9]{1}[0-9]{9}")
-    ])),
-  });
-
-  signInOtp = new FormGroup({
-    digit1: new FormControl("", Validators.compose([
-      Validators.required,
-    ])),
-    digit2: new FormControl("", Validators.compose([
-      Validators.required,
-    ])),
-    digit3: new FormControl("", Validators.compose([
-      Validators.required,
-    ])),
-    digit4: new FormControl("", Validators.compose([
-      Validators.required,
-    ])),
-    digit5: new FormControl("", Validators.compose([
-      Validators.required,
-    ])),
-    digit6: new FormControl("", Validators.compose([
-      Validators.required,
-    ])),
-  });
-
-
-
-
-
   constructor(
     private fireAuth: AngularFireAuth,
     private db: AngularFirestore,

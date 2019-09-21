@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="openProfile()">
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-menu side="end" type="overlay" menuId="profile">
+  <ion-content>
+
+
+    <ion-avatar class="imageAvataar">
+      <img src="assets/imgs/user.png">
+    </ion-avatar>
+    <div class="user">
+      <p class="name"> {{user.name}}</p>
+      <p class="mail"> {{user.email}}</p>
+    </div>
+  </ion-content>
+  <ion-footer>
+    <ion-button (click)="signOut()" color="danger" expand="full">
+      <ion-icon name="exit" class="ion-margin-end"></ion-icon>
+      Log out
+    </ion-button>
+  </ion-footer>
+</ion-menu>
+<ion-router-outlet main></ion-router-outlet>
